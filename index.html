@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Unit Converter</h1>
+        <label for="unit">Choose a conversion:</label>
+<select id="unit">
+    <option value="length">Length</option>
+    <option value="mass">Mass</option>
+    <option value="medical">Medical Units</option>
+</select>
+        
+        <div id="length-options" class="conversion-options">
+            <label for="length-input">Enter value:</label>
+            <input type="number" id="length-input" placeholder="Enter length">
+            <select id="length-unit">
+                <option value="meters-to-feet">Meters to Feet</option>
+                <option value="feet-to-meters">Feet to Meters</option>
+            </select>
+        </div>
+
+        <div id="mass-options" class="conversion-options" style="display: none;">
+            <label for="mass-input">Enter value:</label>
+            <input type="number" id="mass-input" placeholder="Enter mass">
+            <select id="mass-unit">
+                <option value="kg-to-lb">Kilograms to Pounds</option>
+                <option value="lb-to-kg">Pounds to Kilograms</option>
+            </select>
+        </div>
+
+        <!-- Medical Units Section -->
+<div id="medical-options" class="conversion-options" style="display: none;">
+    <label for="medical-input">Enter value:</label>
+    <input type="number" id="medical-input" placeholder="Enter value">
+    <select id="medical-unit">
+        <option value="glucose-mmol-to-mg">Glucose: mmol/L to mg/dL</option>
+        <option value="glucose-mg-to-mmol">Glucose: mg/dL to mmol/L</option>
+        <option value="urea-mmol-to-mg">Urea: mmol/L to mg/dL</option>
+        <option value="urea-mg-to-mmol">Urea: mg/dL to mmol/L</option>
+        <option value="creatinine-micromol-to-mg">Creatinine: µmol/L to mg/dL</option>
+        <option value="creatinine-mg-to-micromol">Creatinine: mg/dL to µmol/L</option>
+        <option value="bilirubin-micromol-to-mg">Bilirubin: µmol/L to mg/dL</option>
+        <option value="bilirubin-mg-to-micromol">Bilirubin: mg/dL to µmol/L</option>
+    </select>
+</div>
+
+        <button id="convert-btn">Convert</button>
+        <h2 id="result"></h2>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
